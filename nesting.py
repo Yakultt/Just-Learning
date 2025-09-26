@@ -1,11 +1,13 @@
-pizza = {
-    "crust": "thick",
-    "toppings": ["mushrooms", "extra cheese"],
+class A:
+    A = 'A'
 
-}
+    def __init__(self):
+        self.A += 'A'
 
-print(f"you ordered a {pizza['crust']}-crust pizza ")
-print(f"here are your toppings!")
 
-for topping in pizza["toppings"]:
-    print(f"\t{topping}")
+class B(A): pass
+
+a = A()
+b = B()
+
+print(b.A)
